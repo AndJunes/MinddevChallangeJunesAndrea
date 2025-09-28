@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <title>MinddevChallenge</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <!-- Brand / logo -->
+      <a class="header__brand" href="/" aria-label="Ir a la página principal">
+        MinddevChallenge
+      </a>
+
+      <!-- Botón hamburguesa -->
+      <button class="header__toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <i class="ri-menu-line"></i>
+      </button>
+
+      <!-- Navegación principal -->
+      <nav class="header__nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link header__nav-link--active" href="/">
+              <i class="ri-home-3-line header__nav-icon"></i>
+              Home
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="/">
+              <i class="ri-information-line header__nav-icon"></i>
+              About
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="/">
+              <i class="ri-contacts-line header__nav-icon"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
