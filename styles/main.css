@@ -1,0 +1,16 @@
+@import url("./base/reset.css");    /* Reset CSS para consistencia entre navegadores */   
+@import url("./base/variables.css"); /* Variables CSS globales */
+@import url("./base/global.css"); /* Estilos globales */
+
+@import url("./layout/header.css"); /* Estilos específicos para el header */
+@import url("./layout/main.css"); /* Estilos específicos para el main */
+@import url("./layout/home.css"); /* Estilos específicos para la sección home */
+@import url("./layout/spa.css"); /* Estilos específicos para la funcionalidad SPA */
+@import url("./layout/about.css"); /* Estilos específicos para la sección about */
+
+@import url("./components/feature-card.css"); /* Estilos para tarjetas de características */
+@import url("./components/section-title.css"); /* Estilos para títulos de secciones */
+@import url("./components/contact-form.css"); /* Estilos para el formulario de contacto */
+
+
+@import url("./media-queries.css"); /* Consultas de medios para responsividad */

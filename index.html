@@ -1,53 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Remix Icon CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <title>MinddevChallenge</title>
-</head>
-<body>
-  <header class="header">
-    <div class="header__container">
-      <!-- Brand / logo -->
-      <a class="header__brand" href="/" aria-label="Ir a la página principal">
-        MinddevChallenge
-      </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!-- Botón hamburguesa -->
-      <button class="header__toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
-        <i class="ri-menu-line"></i>
-      </button>
+    <!-- Remix Icon CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" type="image/icon" href="assets/icons/favicon_64.ico" />
+    <title>MinddevChallenge</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <!-- Brand / logo -->
+        <a class="header__brand" href="/" aria-label="Ir a la página principal">
+          MinddevChallenge
+        </a>
 
-      <!-- Navegación principal -->
-      <nav class="header__nav" id="main-nav" aria-label="Navegación principal">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a class="header__nav-link header__nav-link--active" href="/">
-              <i class="ri-home-3-line header__nav-icon"></i>
-              Home
-            </a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="/">
-              <i class="ri-information-line header__nav-icon"></i>
-              About
-            </a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="/">
-              <i class="ri-contacts-line header__nav-icon"></i>
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <!-- Botón hamburguesa -->
+        <button
+          class="header__toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Abrir menú"
+        >
+          <i class="ri-menu-line"></i>
+        </button>
 
-  <script src="scripts/script.js"></script>
-</body>
+        <!-- Navegación principal -->
+        <nav
+          class="header__nav"
+          id="main-nav"
+          aria-label="Navegación principal"
+        >
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link header__nav-link--active"
+                data-target="home"
+                href="#home"
+              >
+                <i class="ri-home-3-line header__nav-icon"></i>
+                Home
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" data-target="about" href="#about">
+                <i class="ri-information-line header__nav-icon"></i>
+                About
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                data-target="services"
+                href="#services"
+              >
+                <i class="ri-service-line header__nav-icon"></i>
+                Services
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" data-target="contact" href="#contact">
+                <i class="ri-contacts-line header__nav-icon"></i>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Home Section -->
+      <section
+        id="home"
+        class="main__container view active home-section"
+        aria-label="Sección de inicio"
+      >
+        <div class="home__content">
+          <h1 class="home__title">Welcome to MinddevChallenge</h1>
+          <p class="home__description">
+            This is a simple responsive web page built with HTML, CSS, and
+            JavaScript.
+          </p>
+          <button class="home__button" id="btnGetStarted">
+            <span>Get Started</span>
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section
+        id="about"
+        class="main__container view"
+        aria-label="Sección de acerca de"
+      >
+        <div class="about__grid">
+          <div class="about__content">
+            <h1 class="main__title">About Me</h1>
+            <p class="main__description">
+              Hi! 👋 My name is <strong>Andrea Judith Junes</strong>, a
+              passionate Web Developer in training from Argentina.
+            </p>
+            <p class="main__description">
+              I built this project as part of the <em>MinddevChallenge</em>,
+              with the goal of applying my knowledge in
+              <strong>HTML, CSS and JavaScript</strong>
+              to create a responsive and modern website.
+            </p>
+            <p class="main__description">
+              My focus was on keeping a
+              <strong>minimalist aesthetic</strong> while making it interactive
+              — with a clear navigation, animated cards, and smooth transitions.
+            </p>
+            <div class="about__buttons">
+              <a
+                href="https://github.com/AndJunes"
+                target="_blank"
+                class="home__button about__button"
+              >
+                <i class="ri-github-line"></i>
+                <span>See My Code</span>
+              </a>
+
+              <button class="home__button about__button" id="btnGoServices">
+                <i class="ri-arrow-right-line"></i>
+                <span>Our Services</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="about__image">
+            <img
+              src="assets/images/undraw_programmer_raqr.svg"
+              alt="Andrea working on web development"
+            />
+          </div>
+        </div>
+
+        <div class="about__highlights">
+          <div class="about__card">
+            <i class="ri-lightbulb-line"></i>
+            <h3>Learning by Doing</h3>
+            <p>
+              I believe the best way to grow is by building real projects and
+              solving challenges step by step.
+            </p>
+          </div>
+          <div class="about__card">
+            <i class="ri-brush-line"></i>
+            <h3>Minimalist Design</h3>
+            <p>
+              I kept the UI clean, modern, and accessible — focusing on
+              typography, spacing, and smooth navigation.
+            </p>
+          </div>
+          <div class="about__card">
+            <i class="ri-rocket-line"></i>
+            <h3>Future Goals</h3>
+            <p>
+              My mission is to grow as a Frontend Developer and land a role
+              where I can create impactful digital experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section
+        id="services"
+        class="main__container view"
+        aria-label="Sección de servicios"
+      >
+        <h1 class="main__title">Our Services</h1>
+        <p class="main__description">
+          We offer a wide range of web development services to help your
+          business grow.
+        </p>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="ri-code-s-slash-line"></i>
+            </div>
+            <h3 class="feature__title">Web Development</h3>
+            <p class="feature__description">
+              We create modern and responsive websites using the latest
+              technologies.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="ri-smartphone-line"></i>
+            </div>
+            <h3 class="feature__title">Mobile Applications</h3>
+            <p class="feature__description">
+              We develop native and hybrid applications for iOS and Android.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="ri-brush-line"></i>
+            </div>
+            <h3 class="feature__title">UI/UX Design</h3>
+            <p class="feature__description">
+              We design intuitive and attractive interfaces that improve user
+              experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="main__container view"
+        aria-label="Sección de contacto"
+      >
+        <h1 class="main__title">Contact Me</h1>
+        <p class="main__description">
+          Feel free to reach out! I’ll respond as soon as possible.
+        </p>
+
+        <div class="contact__grid">
+          <!-- Formulario -->
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="contact__field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+              />
+              <span class="contact__error" id="errorName"></span>
+            </div>
+            <div class="contact__field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Your Email"
+              />
+              <span class="contact__error" id="errorEmail"></span>
+            </div>
+            <div class="contact__field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Your Message"
+              ></textarea>
+              <span class="contact__error" id="errorMessage"></span>
+            </div>
+            <button type="submit" class="home__button contact__button">
+              <i class="ri-send-plane-line"></i>
+              <span>Send Message</span>
+            </button>
+            <p class="contact__success" id="contactSuccess">
+              Message sent successfully!
+            </p>
+          </form>
+
+          <!-- Info de contacto -->
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <i class="ri-mail-line"></i>
+              <span>junesandrea56@gmail.com</span>
+            </div>
+            <div class="contact__info-item">
+              <i class="ri-phone-line"></i>
+              <span>+54 9 3765 043576</span>
+            </div>
+            <div class="contact__info-item">
+              <i class="ri-map-pin-line"></i>
+              <span>Argentina</span>
+            </div>
+          </div>
+        </div>
+        <!-- Contenedor para mostrar los datos enviados -->
+        <div id="contactPreview" class="contact__preview"></div>
+      </section>
+    </main>
+
+    <script type="module" src="scripts/main.js"></script>
+  </body>
 </html>

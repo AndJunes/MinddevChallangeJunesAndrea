@@ -1,0 +1,30 @@
+@media (min-width: 768px) {
+    .header__toggle {
+        display: none;
+    }
+
+    .header__nav {
+        display: block;
+        position: static;
+        background-color: transparent;
+        border-bottom: none;
+        box-shadow: none;
+    }
+
+    .header__nav-list {
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .header__nav-link {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .header__container {
+        padding: 1rem 0;
+    }
+}
