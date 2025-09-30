@@ -17,4 +17,16 @@ export function initNavbar() {
       toggle.setAttribute("aria-label", "Cerrar menú");
     }
   });
+
+  // Cerrar menú al hacer clic en un enlace (para móviles)
+  document.querySelectorAll('.header__nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        nav.classList.remove('header__nav--open');
+        toggle.setAttribute('aria-expanded', 'false');
+        icon.className = "ri-menu-line";
+        toggle.setAttribute("aria-label", "Abrir menú");
+      }
+    });
+  });
 }

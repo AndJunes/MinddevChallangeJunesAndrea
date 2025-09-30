@@ -1,6 +1,13 @@
+/* ===== ESTILOS GLOBALES ===== */
+body {
+    padding-top: 80px; /* Altura del navbar fijo */
+}
+
+/* ===== MAIN CONTENT RESPONSIVE ===== */
 .main-content {
     flex: 1;
-    max-width: 95%;
+    width: 95%;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 2rem 1rem;
     text-align: center;
@@ -9,18 +16,219 @@
 .main-content h1 {
     margin-bottom: 1rem;
     color: var(--color-primary);
+    font-size: clamp(1.75rem, 4vw, 2.5rem); /* Responsive font size */
 }
 
 .main-content p {
     margin-bottom: 1.5rem;
+    width: 90%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    font-size: clamp(1rem, 2.5vw, 1.125rem); /* Responsive font size */
+    line-height: 1.6;
 }
 
+/* ===== VIEW SECTIONS RESPONSIVE ===== */
+.view {
+    display: block;
+    padding: 4rem 2rem;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+}
+
+/* Home section con layout específico */
+.home-section {
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    min-height: calc(100vh - 80px); /* Restar altura del navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== FEATURES GRID RESPONSIVE ===== */
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    width: 100%;
+}
+
+/* ===== MEJORAS DE NAVEGACIÓN ===== */
+.header__nav-link--active {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Smooth scrolling para toda la página */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Compensa el navbar fijo */
+}
+
+/* ===== MEDIA QUERIES RESPONSIVE ===== */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .main-content {
+        width: 92%;
+        padding: 1.75rem 1rem;
+    }
+    
+    .view {
+        width: 92%;
+        padding: 3rem 1.5rem;
+    }
+    
+    .features {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.75rem;
+    }
+}
+
+/* Tablets pequeñas (600px - 768px) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Reducir padding para móviles si el navbar es más pequeño */
+    }
+    
+    .main-content {
+        width: 90%;
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .view:not(.home-section) {
+        width: 90%;
+        padding: 2rem 1rem;
+        min-height: calc(100vh - 70px);
+    }
+    
+    .home-section {
+        min-height: calc(100vh - 70px);
+    }
+    
+    .features {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    html {
+        scroll-padding-top: 70px;
+    }
+}
+
+/* Móviles grandes (480px - 600px) */
+@media (max-width: 600px) {
+    .main-content {
+        width: 88%;
+        padding: 1.25rem 0.5rem;
+    }
+    
+    .view:not(.home-section) {
+        width: 88%;
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 1.25rem;
+        margin-top: 1.25rem;
+    }
+    
+    .main-content p {
+        width: 95%; /* Más ancho en móviles */
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    body {
+        padding-top: 60px; /* Aún menos padding para móviles muy pequeños */
+    }
+    
+    .main-content {
+        width: 85%;
+        padding: 1rem 0.25rem;
+    }
+    
+    .view:not(.home-section) {
+        width: 85%;
+        padding: 1rem 0.5rem;
+        min-height: calc(100vh - 60px);
+    }
+    
+    .home-section {
+        min-height: calc(100vh - 60px);
+    }
+    
+    .features {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .main-content h1 {
+        margin-bottom: 0.75rem;
+    }
+    
+    .main-content p {
+        margin-bottom: 1rem;
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+    
+    html {
+        scroll-padding-top: 60px;
+    }
+}
+
+/* Pantallas muy grandes (más de 1400px) */
+@media (min-width: 1400px) {
+    .main-content {
+        width: 85%;
+        max-width: 1600px;
+    }
+    
+    .view {
+        width: 85%;
+        max-width: 1400px;
+    }
+}
+
+/* ===== MEJORAS ADICIONALES ===== */
+
+/* Asegurar que las imágenes sean responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mejorar la legibilidad en móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    h1, h2, h3 {
+        line-height: 1.3;
+    }
+}
+
+/* Prevenir desbordamientos horizontales */
+* {
+    max-width: 100%;
+}
+
+/* Mejorar el rendimiento de scroll en móviles */
+@media (max-width: 768px) {
+    .view, .main-content {
+        -webkit-overflow-scrolling: touch;
+    }
 }

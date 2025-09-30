@@ -25,23 +25,23 @@ contactForm.addEventListener("submit", (e) => {
     let valid = true;
 
     if (!name) {
-        errorName.textContent = "Please enter your name.";
+        errorName.textContent = "Por favor ingresa tu nombre.";
         errorName.classList.add("show");
         valid = false;
     }
 
     if (!email) {
-        errorEmail.textContent = "Please enter your email.";
+        errorEmail.textContent = "Por favor ingresa tu email.";
         errorEmail.classList.add("show");
         valid = false;
     } else if (!validateEmail(email)) {
-        errorEmail.textContent = "Please enter a valid email.";
+        errorEmail.textContent = "Por favor ingresa un email válido.";
         errorEmail.classList.add("show");
         valid = false;
     }
 
     if (!message) {
-        errorMessage.textContent = "Please enter a message.";
+        errorMessage.textContent = "Por favor ingresa un mensaje.";
         errorMessage.classList.add("show");
         valid = false;
     }
@@ -53,10 +53,10 @@ contactForm.addEventListener("submit", (e) => {
 
     // Mostrar los datos ingresados
     contactPreview.innerHTML = `
-        <h4>Data Submitted:</h4>
-        <p><strong>Name:</strong> ${name}</p>
+        <h4>Datos Enviados:</h4>
+        <p><strong>Nombre:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong> ${message}</p>
+        <p><strong>Mensaje:</strong> ${message}</p>
     `;
     contactPreview.classList.add("show");
 

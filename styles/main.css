@@ -7,10 +7,12 @@
 @import url("./layout/home.css"); /* Estilos específicos para la sección home */
 @import url("./layout/spa.css"); /* Estilos específicos para la funcionalidad SPA */
 @import url("./layout/about.css"); /* Estilos específicos para la sección about */
+@import url("./layout/footer.css"); /* Estilos específicos para el footer */
 
 @import url("./components/feature-card.css"); /* Estilos para tarjetas de características */
 @import url("./components/section-title.css"); /* Estilos para títulos de secciones */
 @import url("./components/contact-form.css"); /* Estilos para el formulario de contacto */
+@import url("./components/services-cta.css"); /* Estilos para la sección CTA de servicios */
 
 
 @import url("./media-queries.css"); /* Consultas de medios para responsividad */

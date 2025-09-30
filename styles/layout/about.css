@@ -163,7 +163,6 @@
     }
 
     .about__content .about__buttons {
-        flex-direction: column; /* Apilar botones verticalmente en móviles */
         gap: 0.75rem;
     }
 }
